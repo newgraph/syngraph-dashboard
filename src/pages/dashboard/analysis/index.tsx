@@ -43,10 +43,7 @@ interface AnalysisState {
     loading: loading.effects['dashboardAnalysis/fetch'],
   }),
 )
-class Analysis extends Component<
-  AnalysisProps,
-  AnalysisState
-> {
+class Analysis extends Component<AnalysisProps, AnalysisState> {
   state: AnalysisState = {
     salesType: 'all',
     currentTabKey: '',

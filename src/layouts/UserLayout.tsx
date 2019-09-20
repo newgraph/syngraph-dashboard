@@ -40,29 +40,30 @@ const UserLayout: React.SFC<UserLayoutProps> = props => {
       })}
     >
       <div className={styles.container}>
-
-      <Particles canvasClassName={styles.particles}
-        params={{
-          "particles": {
-              "number": {
-                  "value": 150
+        <Particles
+          canvasClassName={styles.particles}
+          params={{
+            particles: {
+              number: {
+                value: 150,
               },
-              "size": {
-                  "value": 7
+              size: {
+                value: 7,
               },
-              "move": {
-                speed: 2
-              }
-          },
-          "interactivity": {
-              "events": {
-                  "onhover": {
-                      "enable": true,
-                      "mode": "grab"
-                  }
-              }
-          }
-        }}/>
+              move: {
+                speed: 2,
+              },
+            },
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: 'grab',
+                },
+              },
+            },
+          }}
+        />
         <div className={styles.lang}>
           <SelectLang />
         </div>
@@ -76,9 +77,7 @@ const UserLayout: React.SFC<UserLayoutProps> = props => {
                 </span>
               </Link>
             </div>
-            <div className={styles.desc}>
-              {`${formatMessage({ id: 'global.app.desc' })}`}
-            </div>
+            <div className={styles.desc}>{`${formatMessage({ id: 'global.app.desc' })}`}</div>
           </div>
           {children}
         </div>

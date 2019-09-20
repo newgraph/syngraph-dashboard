@@ -9,7 +9,6 @@ import { Dispatch } from 'redux';
 import { connect } from 'dva';
 import { formatMessage } from 'umi-plugin-react/locale';
 
-
 import Authorized from '@/utils/Authorized';
 import RightContent from '@/components/GlobalHeader/RightContent';
 import { ConnectState } from '@/models/connect';
@@ -38,7 +37,7 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
       children: item.children ? menuDataRender(item.children) : [],
     };
     return Authorized.check(item.authority, localItem, null) as MenuDataItem;
-});
+  });
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
   const { dispatch, children, settings } = props;
