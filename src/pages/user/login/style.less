@@ -1,0 +1,59 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  width: 368px;
+  margin: 0 auto;
+  background: @user-layout-body-background;
+
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: white;
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+  .line {
+    * > span {
+      color: white;
+    }
+  }
+  .other {
+    margin-top: 24px;
+    line-height: 22px;
+    text-align: left;
+    color: white;
+
+    .register {
+      color: white;
+      float: right;
+    }
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .ant-tabs-tab {
+      color: lightgray;
+    }
+
+    .ant-tabs-tab-active {
+      color: white;
+    }
+
+    .ant-tabs-ink-bar {
+      background: white;
+    }
+  }
+}
